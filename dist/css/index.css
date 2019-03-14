@@ -486,6 +486,104 @@ a {
           font-size: 14px; }
 
 /*nice*/
+.nice-d {
+  width: 1200px;
+  font-size: 26px;
+  color: #333;
+  margin: 0 auto;
+  padding: 27px 0 14px 0; }
+
+.tab3 {
+  position: absolute;
+  width: 36px;
+  height: 72px;
+  font-size: 30px;
+  line-height: 72px;
+  text-align: center;
+  cursor: pointer;
+  top: 30%;
+  text-align: center;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0.4; }
+
+.tab3:hover {
+  opacity: .5;
+  color: white;
+  background: black; }
+
+.left3 {
+  left: 10px;
+  border-radius: 10px; }
+
+.right3 {
+  right: 10px;
+  border-radius: 10px; }
+
+#banner3 {
+  position: relative;
+  width: 1200px;
+  height: 300px;
+  margin: 0 auto;
+  margin-bottom: 30px; }
+
+.warp3 {
+  position: relative;
+  width: 1200px;
+  height: 300px;
+  margin: 0 auto; }
+
+.warp3 .item3 {
+  display: none;
+  width: 1200px;
+  height: 300px;
+  position: absolute; }
+
+.warp3 .item3 img {
+  width: 140px;
+  height: 150px;
+  display: block;
+  padding: 35px 45px 20px 45px; }
+
+.warp3 .list3 {
+  float: left;
+  width: 230px;
+  height: 295px;
+  text-align: center;
+  margin: 0 5px; }
+
+.warp3 .list3 .nice {
+  height: 240px;
+  width: 230px;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.06);
+  border-radius: 10px;
+  transition: all .4s linear 0s; }
+
+.warp3 .list3 .nice p {
+  font-size: 14px;
+  line-height: 36px;
+  height: 36px;
+  border-radius: 0 0 10px 10px;
+  width: 230px;
+  background: #f3f3f3;
+  color: #777; }
+
+.warp3 .list3 b {
+  font-weight: normal;
+  display: block; }
+
+.warp3 .list3 b:first-of-type {
+  height: 24px;
+  line-height: 24px;
+  font-size: 18px;
+  padding-top: 5px; }
+
+.warp3 .list3 b:last-of-type {
+  height: 24px;
+  line-height: 24px;
+  font-size: 16px;
+  color: #d0021b; }
+
 /*slide2*/
 #banner2 {
   position: relative;

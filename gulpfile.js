@@ -4,14 +4,14 @@ const gulp = require('gulp'),
 //	  imagemin = require('gulp-imagemin');
 	 
 gulp.task('sass',function(){
-	gulp.src('./src/sass/buy.scss')
+	gulp.src('./src/sass/index.scss')
 	.pipe(sass())
 	//.pipe(cleanCss())
 	//.pipe(rename({'suffix' : '.min'}))
 	.pipe(gulp.dest('./dist/css'));
 })
 gulp.task('default',()=>{
-	gulp.watch(['./src/sass/buy.scss'],['sass']);
+	gulp.watch(['./src/sass/index.scss'],['sass']);
 })
 
 //打包图片任务

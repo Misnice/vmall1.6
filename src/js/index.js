@@ -1,10 +1,34 @@
 //加载css样式
 //require("!style-loader!css-loader!../../dist/css/index.css");
-//js区域
+
+//切换
 aaa();
 function aaa(){
-	console.log('测试函数中的内容');
+	var index = 0; //定义一个下标
+	var stop = false; //定义一个触发器
+	var $li = $("#banner3").find(".warp3").children(".item3"); //获取所有的轮播图片
+	
+	//左边点击按钮
+	$(".left3").click(function(){
+		index--;
+		if(index < 0){
+			index = $li.length-1;
+		}
+		$li.eq(index).stop(true, true).fadeIn().siblings().fadeOut();
+		
+	});
+	//右边点击按钮
+	$(".right3").click(function(){
+		index++;
+		if(index > $li.length-1){
+			index = 0;
+		}
+		$li.eq(index).stop(true,true).fadeIn().siblings().fadeOut();
+		
+	});
 }
+
+
 
 //轮播
 slideBox();
@@ -72,11 +96,7 @@ function slideBox2(){
 	var stop = false; //定义一个触发器
 	var $li = $("#banner2").find(".warp2").children(".item2"); //获取所有的轮播图片
 	var $page = $("#banner2").find(".bth-list2").children(".bth2"); //获取所有的圆点列表
-	$page.hover(function() {	
-		index = $(this).index(); //把图片下标的值赋给定义下标
-		$(this).addClass("active2").stop(true,true).siblings().removeClass("active2"); //给鼠标选中的圆点列表添加样式
-		$li.eq(index).stop(true,true).fadeIn(1000).siblings().fadeOut(1000); //轮播图片淡入淡出效果
-	});
+	
 	//自动轮播图片
 	var timer = setInterval(function() {
 		if(stop) return;
@@ -86,12 +106,20 @@ function slideBox2(){
 		}
 		$li.eq(index).stop(true, true).fadeIn().siblings().fadeOut();
 		$page.eq(index).addClass("active2").stop(true, true).siblings().removeClass("active2");
-	},5000);
-	//鼠标移入图片内，自动轮播停止
+	},4000);
+		
+	$page.hover(function() {
+		
+		index = $(this).index(); //把图片下标的值赋给定义下标
+		$(this).addClass("active2").stop(true,true).siblings().removeClass("active2"); //给鼠标选中的圆点列表添加样式
+		$li.eq(index).stop(true,true).fadeIn(500).siblings().fadeOut(500); //轮播图片淡入淡出效果
+		
+	});
+	
 	$("#banner2").mousemove(function() {
 		clearInterval(timer);
 	}).mouseout(function() {
-		var timer = setInterval(function() {
+		timer = setInterval(function() {
 			if(stop) return;
 			index++;
 			if(index > $li.length-1) {
@@ -99,8 +127,9 @@ function slideBox2(){
 			}
 			$li.eq(index).stop(true, true).fadeIn().siblings().fadeOut();
 			$page.eq(index).addClass("active2").stop(true, true).siblings().removeClass("active2");
-		},5000);
+		},4000);
 	});
+	
 }
 
 //跳转shift
